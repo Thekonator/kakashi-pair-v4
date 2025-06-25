@@ -78,7 +78,7 @@ var randomItem = selectRandomItem(items);
                         let md = "ANCORE_" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
                         let desc = `*Hello there Ancore User! 💙* 
-> ```Welcome to Ancore```
+> *Welcome to Ancore*
 
 *Thanks for using Ancore 💙* 
 
@@ -90,7 +90,7 @@ https://whatsapp.com/channel/0029Vb6nHar2phHORBFhOn3p
 
 https://t.me/+fr3SZ2MYyv4wMzU0
 
-> *```© Powered by Corex with 💙```*`; 
+> *© Powered by Corex with 💙*`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
