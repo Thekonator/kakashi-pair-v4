@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ancore-Session</title>
+  <link rel="icon" href="https://files.catbox.moe/6l3mme.jpeg" type="image/x-icon"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --red: #ff0000;
+      --purple: #ff85a2;
+      --black: #0d0d0d;
+      --white: #ffffff;
+      --goodness: #663399;
+      --tomato: #FF6347;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: url('https://files.catbox.moe/eswtx7.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--white);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode 
+    { background:
+url('https://files.catbox.moe/6l3mme.jpeg') no-repeat center center fixed; background-size: cover;}
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(50px);
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, var(--red), var(--purple));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .socials {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .socials a {
+      color: #fff;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease, color 0.3s;
+    }
+
+    .socials a:hover {
+      transform: translateY(-3px);
+      color: var(--pink);
+    }
+
+    .toggle-mode {
+      background: transparent;
+      color: #fff;
+      font-size: 1rem;
+      border: 1px solid #fff;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .type-text {
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(var(--red));
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 2rem;
+    }
+
+    .desc {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+      transition: transform 0.3s ease;
+    }
+ 
+    .card:hover {
+      transform: scale(1.02);
+    }
+ 
+    .card-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      font-weight: bold;
+    }
+ 
+    .card-desc {
+      font-size: 0.9rem;
+      margin-bottom: 1.2rem;
+      color: #ddd;
+    }
+    .btn {
+      padding: 0.8rem 2rem;
+      background: linear-gradient(to right, var(--red), var(--tomato), var(--red));
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .how-it-works {
+      position: absolute;
+      left: 0;
+      top: -2rem;
+    }
+
+    .small-btn {
+      background: #D4AF37;
+      color: var(--black);
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .note {
+      display: none;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1.5rem;
+      border-radius: 20px;
+      color: #eee;
+      font-size: 0.9rem;
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    .back-btn {
+      margin-bottom: 1rem;
+      display: inline-block;
+      color: var(--pink);
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    footer a {
+      color: var(--pink);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .type-text {
+        font-size: 1.5rem;
+      }
+      .how-it-works {
+        top: -2.5rem;
+      }
+  . #1a1a1a;
+      border: 4px solid #333333;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+    .corex{
+        height:100%;
+        width:100%;
+        margin-left:1rem
+    }
+}
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Ancore</div>
+    <div class="socials">
+      <a href="https://t.me/+fr3SZ2MYyv4wMzU0" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://whatsapp.com/channel/0029Vb6nHar2phHORBFhOn3p" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://github.com/Corex24" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <button class="toggle-mode" onclick="toggleMode()">💡</button>
+  </header>
+
+  <main class="container">
+    
+    <div class="type-text" id="typingText"></div>
+
+    <div class="card" data-aos="fade-up">
+      <div class="card-title"><i class="fas fa-link"></i> Pair Code Login</div>
+      <div class="card-desc">Link your WhatsApp using your WhatsApp number and receive an instant pairing code to get session for Ancore.</div>
+      <button class="btn" href="/pair">Pair Code</button>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <div class="card-title"><i class="fas fa-qrcode"></i> Scan QR Code</div>
+      <div class="card-desc">Quick login with QR for Ancore session. Fast and flexible connection.</div>
+      <button class="btn" href="/qr">Generate QR Code</button>
+    </div>
+    
+<div class="card" data-aos="fade-up">
+
+      <a href="">
+      <button class="btn">Repository</button> <a/>
+    </div>
+    <div class="note" id="noteSection">
+      <span class="back-btn" onclick="hideNote()">← Back</span>
+      <p style="text-align:Center; font-size:1.5rem;"><strong>🔥How to Pair Ancore🔥</strong></p>
+      <ol>
+        <li>Click on <b style="font-size:1rem;">Get Pair Code</b> to get a 6-digit code for your WhatsApp account.</li>
+        <li>Open your WhatsApp and tap on <b style="font-size:1rem;">Linked Devices</b>.</li>
+        <li>Tap on <b style="font-size:1rem">Link a Device</b> and enter the code you received.</li>
+        <li>Done! Your session will be connected and ready to use in Ancore 🔥.</li>
+      </ol>
+    </div>
+<div class="how-it-works">
+      <button class="small-btn" onclick="showNote()">Help</button>
+    </div>
+  </main>
+
+  <footer>
+  <div>
+  <a>👇Dont click😁👇</a>
+  </div>
+    <a href="https://github.com/Corex24" target="_blank">𝐶𝛩𝑅𝛯𝛸 𝛥𝛮𝑇𝛨𝛩𝛮𝑌</a>
+    <p style="">© 2025 Ancore || Create by Corex with 💙
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const titles = [
+      "Get Your WhatsApp Sessions🔥",
+      "Powered",
+      "by",
+      "🔥𝐶𝛩𝑅𝛯𝛸 𝛥𝛮𝑇𝛨𝛩𝛮𝑌🔥"
+    ];
+    let i = 0, j = 0;
+
+    function type() {
+      if (i < titles.length) {
+        if (j <= titles[i].length) {
+          document.getElementById('typingText').textContent = titles[i].slice(0, ++j);
+          setTimeout(type, 100);
+        } else {
+          i = (i + 1) % titles.length;
+          j = 0;
+          setTimeout(type, 1000);
+        }
+      }
+    }
+    type();
+
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    function showNote() {
+      document.getElementById('noteSection').style.display = 'block';
+    }
+
+    function hideNote() {
+      document.getElementById('noteSection').style.display = 'none';
+    }
+  </script>
+     <audio id="player" src="https://od.lk/s/MjZfNzU0MzQ2ODdf/AUD-20250625-WA0423.mp3" loop></audio>
+
+    <!-- Draggable Play/Pause Button -->
+    <button 
+      id="btn" 
+      onclick="var a=document.getElementById('player');var b=document.getElementById('btn');if(a.paused){a.play();b.innerText='⏸️';}else{a.pause();b.innerText='▶️';}" 
+      style="position:fixed;margin-top:30rem;bottom:1rem;right:1rem;padding:1rem 1.2rem;font-size:1.5rem;border:none;border-radius:50%;background: rgba(17,17,17,0.5);color:#fff;cursor:pointer;z-index:999;">
+      ▶️
+    </button>
+
+    <script>
+      var btn=document.getElementById("btn"),pos1=0,pos2=0,pos3=0,pos4=0;
+      btn.onmousedown=function(e){
+        e.preventDefault();
+        pos3=e.clientX;
+        pos4=e.clientY;
+        document.onmouseup=closeDragElement;
+        document.onmousemove=elementDrag;
+      };
+      function elementDrag(e){
+        e.preventDefault();
+        pos1=pos3-e.clientX;
+        pos2=pos4-e.clientY;
+        pos3=e.clientX;
+        pos4=e.clientY;
+        btn.style.top=(btn.offsetTop-pos2)+"px";
+        btn.style.left=(btn.offsetLeft-pos1)+"px";
+      }
+      function closeDragElement(){
+        document.onmouseup=null;
+        document.onmousemove=null;
+      }
+    </script>
+</body>
+</html>
+
