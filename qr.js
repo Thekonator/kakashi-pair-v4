@@ -104,7 +104,7 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `*Don't Share with anyone this code use for deploying Kakashi-Pair*\n\n ◦ *Github:* https://github.com/Thekonator/kakashi-pair-v4/edit`;
+                            let desc = `*Don't Share with anyone this code use for deploying Kakashi-Pair*\n\n ◦ *Github:* https://github.com/Thekonator/kakashi-pair-v4`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
