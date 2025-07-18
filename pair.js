@@ -77,10 +77,10 @@ var randomItem = selectRandomItem(items);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
                         let md = "KAKASHI_" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hello there Kakashi pair User! 💙* 
-> *Welcome to Kakashi Pairing Code*
+                        let desc = `*Hello there Kakashi Pair User! 💙* 
+> *Welcome to Kakashi-Pairing-Code*
 
-*Thanks for using Ancore 💙* 
+*Thanks for using Kakashi-Pair 💙* 
 
 > Join Kakashi WhatsApp Channel :- ⤵️
 
@@ -90,7 +90,7 @@ https://whatsapp.com/channel/0029VbB2Blh0G0XqSDJS4f0X
 
 https://t.me/+xIhnP3XUFjo1Zjlk
 
-> *© Powered by Kakashi with 💙*`; 
+> *© Powered by Kakashi-Tech with 💙*`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
