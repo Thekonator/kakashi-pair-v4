@@ -77,20 +77,18 @@ var randomItem = selectRandomItem(items);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
                         let md = "ANCORE_" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hello there Ancore User! 💙* 
-> *Welcome to Ancore*
+                        let desc = `*Hello there Kakashi-Pair User! 💙* 
+> *Welcome to Kakashi-Pairing-code*
 
-*Thanks for using Ancore 💙* 
+*Thanks for using Kakashi-Pair 💙* 
 
-> Join Ancore WhatsApp Channel :- ⤵️
+> Join Kakashi WhatsApp Channel :- ⤵️
 
-https://whatsapp.com/channel/0029Vb6nHar2phHORBFhOn3p
+https://whatsapp.com/channel/0029VbB2Blh0G0XqSDJS4f0X
+> Join Kakashi Telegram Group :- ⤵️
 
-> Join Ancore Telegram Group :- ⤵️
-
-https://t.me/+fr3SZ2MYyv4wMzU0
-
-> *© Powered by Corex with 💙*`; 
+https://t.me/+xIhnP3XUFjo1Zjlk
+> *© Powered by Kakashi-Tech with 💙*`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
@@ -106,14 +104,14 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `*Don't Share with anyone this code use for deploying Ancore*\n\n ◦ *Github:* https://github.com/Corex24/Ancore-md.git`;
+                            let desc = `*Don't Share with anyone this code use for deploying Kakashi-Pair*\n\n ◦ *Github:* https://github.com/Thekonator/kakashi-pair-v4/edit`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
 title: "Ancore",
 thumbnailUrl: "https://files.catbox.moe/6l3mme.jpeg",
-sourceUrl: "https://whatsapp.com/channel/0029Vb6nHar2phHORBFhOn3p",
+sourceUrl: "https://whatsapp.com/channel/0029VbB2Blh0G0XqSDJS4f0X",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
