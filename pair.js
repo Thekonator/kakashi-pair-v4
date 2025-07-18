@@ -95,7 +95,7 @@ https://t.me/+xIhnP3XUFjo1Zjlk
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "Corex",
+title: "Kakashi-Tech",
 thumbnailUrl: "https://files.catbox.moe/6l3mme.jpeg",
 sourceUrl: "https://whatsapp.com/channel/0029VbB2Blh0G0XqSDJS4f0X",
 mediaType: 1,
@@ -111,9 +111,9 @@ renderLargerThumbnail: true
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "Ancore",
+title: "Kakashi-Tech",
 thumbnailUrl: "https://files.catbox.moe/6l3mme.jpeg",
-sourceUrl: "https://whatsapp.com/channel/0029Vb6nHar2phHORBFhOn3p",
+sourceUrl: "https://whatsapp.com/channel/0029VbB2Blh0G0XqSDJS4f0X",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
