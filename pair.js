@@ -75,29 +75,29 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "ANCORE_" + string_session;
+                        let md = "KAKASHI_" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hello there Ancore User! 💙* 
-> *Welcome to Ancore*
+                        let desc = `*Hello there Kakashi pair User! 💙* 
+> *Welcome to Kakashi Pairing Code*
 
 *Thanks for using Ancore 💙* 
 
-> Join Ancore WhatsApp Channel :- ⤵️
+> Join Kakashi WhatsApp Channel :- ⤵️
 
-https://whatsapp.com/channel/0029Vb6nHar2phHORBFhOn3p
+https://whatsapp.com/channel/0029VbB2Blh0G0XqSDJS4f0X
 
-> Join Ancore Telegram Group :- ⤵️
+> Join Kakashi Telegram Group :- ⤵️
 
-https://t.me/+fr3SZ2MYyv4wMzU0
+https://t.me/+xIhnP3XUFjo1Zjlk
 
-> *© Powered by Corex with 💙*`; 
+> *© Powered by Kakashi with 💙*`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
 title: "Corex",
 thumbnailUrl: "https://files.catbox.moe/6l3mme.jpeg",
-sourceUrl: "https://whatsapp.com/channel/0029Vb6nHar2phHORBFhOn3p",
+sourceUrl: "https://whatsapp.com/channel/0029VbB2Blh0G0XqSDJS4f0X",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
@@ -106,7 +106,7 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `*Don't Share with anyone this code use for deploy Ancore*\n\n ◦ *Github:* https://github.com/Corex24/Ancore-md.git `;
+                            let desc = `*Don't Share with anyone this code use for deploy Kakashi-Pair-V4*\n\n ◦ *Github:* https://github.com/Thekonator/kakashi-pair-v4 `;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
